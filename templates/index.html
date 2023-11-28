@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep Button</title>
+</head>
+<body>
+    <h1>Beep Button</h1>
+    <button onclick="beep()">Beep</button>
+
+    <script>
+        function beep() {
+            // You can adjust the frequency and times as needed
+            fetch('/beep/1000/5')  // Example: Beep 3 times at 1000 Hz
+                .then(response => response.text())
+                .then(message => console.log(message));
+        }
+    </script>
+</body>
+</html>
